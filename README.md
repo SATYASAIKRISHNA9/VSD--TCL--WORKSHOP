@@ -17,6 +17,7 @@ verifying three general scenarios for a user POV and giving info w.r.t case by t
   - user doesnt enter the csv file
   - user enters the wrong csv file/ file doesnt exist
   - user enters __-help__
+    
 ![image](https://github.com/Visruat/VSD-TCL/assets/79971687/23682215-d304-46b6-9cf6-a187ae589173)
 
 source the Unix shell to the Tcl script by passing the required csv file as an argument
@@ -70,8 +71,7 @@ __Creating scripts for synthesis and running it on yosys__
 
   Case --> When all the modules are present and called by verilog file
 
-  ![8gj8hq1n](https://github.com/SATYASAIKRISHNA9/VSD-TCL/assets/79971687/30a26473-44ec-418f-80b8-2d4f85887eb3)
-
+  ![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/b253fbef-b889-4e8c-a223-82bfce2966da)
 
   Case --> moduled referenced and not called or module doesn't exist and calling by verilog
 
@@ -82,11 +82,13 @@ __Creating scripts for synthesis and running it on yosys__
 
   Case -->  All hierarchies present in design
   
-![8ydifnlk](https://github.com/SATYASAIKRISHNA9/VSD-TCL/assets/79971687/ab7bc142-8746-4553-9f41-b9dab874a43c)
+  ![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/0576168c-8c8a-47fb-8ce1-da67043ebe86)
+
 
 
   Case --> error encountered in hierarchy
 
-![Screenshot from 2023-06-18 17-12-06](https://github.com/Visruat/VSD-TCL/assets/125136551/24095315-680a-4905-960c-6da157f034d3)
+![atsl2lmf](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/9efc27d1-b8c2-4f94-aece-f97c38ba3830)
+
 
 
