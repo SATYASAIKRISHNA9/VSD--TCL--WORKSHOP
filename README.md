@@ -1,4 +1,4 @@
-# VSD--TCL--WORKSHOP : From Introduction to Advanced Scripting Techniques in Design and Synthesis
+# TCL Workshop: From Introduction to Advanced Scripting Techniques in Design and Synthesis
 ---------------------------------------------------------------------------------------------------
 
 ## Introduction
