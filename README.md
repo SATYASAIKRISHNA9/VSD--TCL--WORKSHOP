@@ -326,7 +326,8 @@ puts "set_timing_fpath $sdc_dirname/$sdc_filename.timing"
 - we setup a file which is linked to the synthesis netlist. from this file grep all the nets which are bussed and enter them in the required format such that all ports of the bus has been constrained.
 - incase we find a non bussed lines while going through the netlist we write them as it is in the netlist to the final timing file.
 
-![sm0pghxe](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/500bd52d-adf7-4566-b71d-a59033cf33fe)
+
+![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/4241495a-aab5-4277-84ee-969d649e858d)
 
 
 now we have reached the end of the read_sdc. proc
@@ -490,7 +491,8 @@ close $report_file
 
 once all the output data is taken from .results file, we shall format it into a datasheet and display in the termianl window 
 
-![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/fcdcc68f-a979-4c15-8a50-0a585cd78086)
+
+![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/84f53a91-acdf-496d-98d1-0a8524a52a9c)
 
 
 ```
@@ -513,7 +515,11 @@ puts "\n"
 
 ### Final Output of Tcl Box
 
-![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/7ab140df-3c87-43e9-8557-24a5f1a7880f)
+
+
+![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/e187d05f-29b8-499b-9848-bbd6a5873ab0)
+
+
 
 ## Conclusion
 
