@@ -76,20 +76,21 @@ __Creating scripts for synthesis and running it on yosys__
 
   Case --> moduled referenced and not called or module doesn't exist and calling by verilog
 
-![Screenshot from 2023-06-18 16-53-40](https://github.com/Visruat/VSD-TCL/assets/125136551/2ea42db4-f89a-4bc6-b4fb-345ab93d1637)
+![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/03809475-3714-46c8-a1fd-e90be737d6ba)
+
 
   - after the hierarchy check is passed . The main synthesis script is written.
   - running synthesis if there is no error in hierarchy check.
 
   Case -->  All hierarchies present in design
   
-  ![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/0576168c-8c8a-47fb-8ce1-da67043ebe86)
-
+![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/5608c0e9-a14d-4c14-8385-43cddc2983d8)
 
 
   Case --> error encountered in hierarchy
 
-![atsl2lmf](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/9efc27d1-b8c2-4f94-aece-f97c38ba3830)
+![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/b70204d3-40a2-4659-8818-70fcc3094a46)
+
 
 
 ## DAY-5
