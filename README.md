@@ -71,7 +71,8 @@ __Creating scripts for synthesis and running it on yosys__
 
   Case --> When all the modules are present and called by verilog file
 
-  ![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/b253fbef-b889-4e8c-a223-82bfce2966da)
+  ![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/a55c8190-aee0-4f0f-8665-883ef61b85ac)
+
 
   Case --> moduled referenced and not called or module doesn't exist and calling by verilog
 
