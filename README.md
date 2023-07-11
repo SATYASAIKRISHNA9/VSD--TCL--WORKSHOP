@@ -150,7 +150,7 @@ set_multi_cpu_usage -localCpu 8 -help
 - "switch -glob -- [lindex $args 0]" --> globbing is used to get the term inside [] so that switch can map to the corresponding case. Takes only the ket of the key-value pair 
 - "set args [lassign $args - options(-localCpu)]" --> assigning new value to args after removing the array element which was used to enter the loop
 
-![image](https://github.com/SATYASAIKRISHNA9/VSD-TCL/assets/79971687/8e6445ec-62f0-4a4f-866a-ac721d7eff0f)
+![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/1e9e6f6c-d622-4892-a477-df6094d43960)
 
 
 3) read_lib.proc
@@ -183,7 +183,8 @@ read_lib  -late  /home/vsduser/vsdsynth/osu018_stdcells.lib  -early /home/vsduse
 - Similar to the set_num_threads proc , the read_lib proc will have 3 options i.e _late early and help_
 - the proc ensures to read the late and early lib file for STA and write it in a file
 
-![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/0ad84154-11dd-40c5-ade7-a17cb4a98d2a)
+![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/1b801eb5-68cc-4604-bd84-1bc3f6be44e5)
+
 
 4) read_verilog.proc
 
@@ -195,7 +196,9 @@ read_verilog /home/vsduser/vsdsynth/outdir_openMSP430/openMSP430.synth.v
 ```
 - This proc enters the puts statement followed by the netlist file
 
-![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/f815be16-c501-4502-850b-b2e4a6462ee6)
+![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/c7c71542-69c1-40a3-a367-d5b855670e7a)
+
+
 
 5) read_sdc.proc
 
@@ -217,7 +220,8 @@ close $tmp_file
 - setting directory and filename for sdc , also replacing the " [] " with "" in a temp file
 - special mapping done so that it can diffrentiate between "abc" and "abc_en". Refer the block of code.
 
-  ![8qgyh8vd](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/55e59d87-80e0-4a80-b3f2-682ad0d5fe3a)
+ ![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/d6cdc569-1d4d-44f3-9eb4-81fe744830d7)
+
 
 - converting create_clock constraints
 ```
@@ -278,12 +282,15 @@ close $tmp2_file
 - arrival time (at) $port_name $delay_value is then written into the timing file.
 Note: for grepping all wildcards --> we compared it with * $port_name * since its given that way in the file content
 
-![create_clock_constraints](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/48e61006-a7fd-47a9-b03d-26f68845c20f)
+
+
+![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/c16432a6-5dcc-4073-a141-a2632c5f48a9)
 
 
 script written based off the above image 
 
-![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/7937ac0b-62ab-4af7-83a4-34c61c80b3fc)
+
+![image](https://github.com/SATYASAIKRISHNA9/VSD--TCL--WORKSHOP/assets/79971687/bb58b273-ca13-46da-9591-6474d37ae71b)
 
 
 output of the script.
