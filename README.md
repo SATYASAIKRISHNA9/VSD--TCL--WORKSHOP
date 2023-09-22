@@ -32,6 +32,102 @@ __Converting inputs to format[1] and feeding it to yosys for synthesis__
 
   ###Create Variables
 
+
+  #Script begins.
+
+#Define a variable in the global scope.
+set f "This is a global variable";
+
+#This global procedure will generate an error because the
+#global variable f is not in the scope.
+proc testproc1 {} {
+   catch {puts $f} g;
+   puts $g;
+}
+
+#This procedure will not generate an error because the
+#global variable f is localized with the global command.
+proc testproc2 {} {
+   global f;
+   catch {puts $f} g;
+   puts $g;
+}
+
+#A call to delete the namespace clears variables within
+#that namespace.
+catch {namespace delete ::testspace};
+
+#The namespace eval command creates a new namespace.
+namespace eval ::testspace {
+   variable fg "This is a namespace variable";
+   
+   #Export a single procedure for use later.
+   namespace export tproc3
+}
+
+#Procedures can be organized into namespaces.
+proc ::testspace::tproc1 {} {
+   #Global procedures do not require a namespace indicator.
+   testproc1;
+   testproc2;
+
+   #Procedures within the same scope do not require a 
+   #namespace indicator.
+   tproc2;
+   tproc3;
+
+   #Procedures from other namespaces must be explicitly declared
+   #unless a namespace import is used.
+   catch {oproc1} ds;
+   puts $ds;
+   ::otherspace::oproc1;
+}
+
+#This namespace procedure will generate an error because the
+#namespace variable is not in the scope.
+proc ::testspace::tproc2 {} {
+   #The catch command is used to prevent the script from
+   #exiting with an error.
+   catch {puts $fg} g;
+   puts $g;
+}
+
+#This namespace procedure will not generate an error because the
+#namespace variable is localized.
+proc ::testspace::tproc3 {} {
+   #The variable command, if referring to an existing
+   #namespace variable and not making an assignment,
+   #allows local access to the variable.
+   variable fg;
+   catch {puts $fg} g;
+   puts $g;
+}
+
+#A call to delete the namespace clears variables within
+#that namespace.
+catch {namespace delete ::otherspace};
+
+#Creating a second namespace.
+namespace eval ::otherspace {
+   variable fh "This is a different namespace variable";
+}
+
+proc ::otherspace::oproc1 {} {
+   #The namespace import command can be used to
+   #localize procedures.
+   namespace import ::testspace::tproc3;
+   variable fh;
+   catch {puts $fh} h;
+   puts $h;
+   tproc3;
+
+   #namespace origin returns original namespace of the proc.
+   puts [namespace origin tproc3];
+}
+
+#Run the primary procedure
+::testspace::tproc1
+
   __- Checking if the directories exist or not ( done to prevent the script from breaking )__
 
 ![Screenshot from 2023-06-15 15-29-57](https://github.com/Visruat/VSD-TCL/assets/125136551/17c7398b-593d-40f9-a267-35bc6e7afc9a)
